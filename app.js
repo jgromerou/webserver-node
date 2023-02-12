@@ -23,13 +23,21 @@ app.get('/', (req, res) => {
   });
 });
 
+// app.get('/generic', (req, res) => {
+//   res.sendFile(__dirname + '/public/generic.html');
+// });
+
 app.get('/generic', (req, res) => {
-  res.sendFile(__dirname + '/public/generic.html');
+  //   res.sendFile(__dirname + '/public/elements.html');
+  res.render('generic', {
+    nombre: 'Fernando Herrera',
+    titulo: 'Curso de Node',
+  });
 });
 
 app.get('/elements', (req, res) => {
   //   res.sendFile(__dirname + '/public/elements.html');
-  res.render('generic', {
+  res.render('elements', {
     nombre: 'Fernando Herrera',
     titulo: 'Curso de Node',
   });
